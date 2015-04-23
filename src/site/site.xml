@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Maven">
+    <bannerLeft>
+        <name>Maven</name>
+        <src>./images/connex_logo.png</src>
+        <href>http://www.medhost.com/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>./images/connex_logo_h71.png</src>
+    </bannerRight>
+    <body>
+
+        <menu name="Cache Implementation">
+            <item name="Bench Marking" href="benchmarking.html"/>
+        </menu>
+
+        <menu ref="reports"/>
+
+
+    </body>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-application-skin</artifactId>
+        <version>1.0</version>
+    </skin>
+
+</project>

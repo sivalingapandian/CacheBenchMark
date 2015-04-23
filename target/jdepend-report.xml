@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.medhost.cache">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>10</Ce>
+                <A>0.2</A>
+                <I>0.83</I>
+                <D>0.03</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="CacheData.java">
+                    com.medhost.cache.CacheData
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DatabaseCache.java">
+                    com.medhost.cache.DatabaseCache
+                </Class>
+                <Class sourceFile="DistributedCache.java">
+                    com.medhost.cache.DistributedCache
+                </Class>
+                <Class sourceFile="DistributedEmbededCache.java">
+                    com.medhost.cache.DistributedEmbededCache
+                </Class>
+                <Class sourceFile="EhCache.java">
+                    com.medhost.cache.EhCache
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.sql</Package>
+                <Package>net.sf.ehcache</Package>
+                <Package>net.sf.ehcache.config</Package>
+                <Package>net.sf.ehcache.store</Package>
+                <Package>org.infinispan</Package>
+                <Package>org.infinispan.manager</Package>
+                <Package>org.slf4j</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.medhost.cache.distributed</Package>
+                <Package>com.medhost.cache.tester</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.medhost.cache.distributed">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>7</Ce>
+                <A>0</A>
+                <I>0.88</I>
+                <D>0.12</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DistributedCacheLoader.java">
+                    com.medhost.cache.distributed.DistributedCacheLoader
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.medhost.cache</Package>
+                <Package>java.lang</Package>
+                <Package>org.infinispan</Package>
+                <Package>org.infinispan.configuration.cache</Package>
+                <Package>org.infinispan.configuration.global</Package>
+                <Package>org.infinispan.manager</Package>
+                <Package>org.slf4j</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.medhost.cache.tester</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.medhost.cache.tester">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>8</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="CacheCommandLineTester.java">
+                    com.medhost.cache.tester.CacheCommandLineTester
+                </Class>
+                <Class sourceFile="CacheSampler.java">
+                    com.medhost.cache.tester.CacheSampler
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.medhost.cache</Package>
+                <Package>com.medhost.cache.distributed</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>org.apache.jmeter.config</Package>
+                <Package>org.apache.jmeter.protocol.java.sampler</Package>
+                <Package>org.apache.jmeter.samplers</Package>
+                <Package>org.slf4j</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.net">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.sql">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="net.sf.ehcache">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="net.sf.ehcache.config">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="net.sf.ehcache.store">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.jmeter.config">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.jmeter.protocol.java.sampler">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.jmeter.samplers">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.infinispan">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.infinispan.configuration.cache">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.infinispan.configuration.global">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.infinispan.manager">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.slf4j">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>
