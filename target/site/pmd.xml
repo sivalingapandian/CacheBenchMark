@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2015-04-23T14:28:55.816">
-<file name="/home/pandian/IdeaProjects/CacheBenchMark/src/main/java/com/medhost/cache/distributed/DistributedCacheLoader.java">
-<violation beginline="21" endline="21" begincolumn="27" endcolumn="32" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.medhost.cache.distributed" class="DistributedCacheLoader" variable="logger" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
-Avoid unused private fields such as 'logger'.
-</violation>
-</file>
-</pmd>

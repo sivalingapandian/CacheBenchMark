@@ -1,6 +1,0 @@
-#surefire
-#Thu Apr 23 09:33:36 CDT 2015
-user.dir=/home/pandian/IdeaProjects/CacheBenchMark
-localRepository=/home/pandian/.m2/repository
-dependency.locations.enabled=false
-basedir=/home/pandian/IdeaProjects/CacheBenchMark
