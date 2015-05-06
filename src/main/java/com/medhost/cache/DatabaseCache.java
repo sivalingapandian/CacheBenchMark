@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 
 /**
+ * Database is used as cache
+ *
  * Created by pandian on 4/16/15.
  */
 public class DatabaseCache implements CacheData {
@@ -37,7 +39,7 @@ public class DatabaseCache implements CacheData {
 
     public void loadData(String data, String value) {
 
-        try( PreparedStatement preparedStatement = connection.prepareStatement(INSERT);) {
+        try( PreparedStatement preparedStatement = connection.prepareStatement(INSERT)) {
             preparedStatement.setString(1, data);
             preparedStatement.setString(2, value);
             preparedStatement.execute();

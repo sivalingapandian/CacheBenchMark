@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="Maven">
+<project name="CacheBenchMark">
     <bannerLeft>
         <name>Maven</name>
         <src>./images/connex_logo.png</src>
@@ -11,7 +11,8 @@
     <body>
 
         <menu name="Cache Implementation">
-            <item name="Bench Marking" href="benchmarking.html"/>
+            <item name="Bench Marking - APT" href="benchmarking.html"/>
+            <item name="Bench Marking - MarkDown" href="benchmarkingmd.html"/>
         </menu>
 
         <menu ref="reports"/>
@@ -21,8 +22,13 @@
 
     <skin>
         <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-application-skin</artifactId>
-        <version>1.0</version>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.3.1</version>
     </skin>
+    <custom>
+        <fluidoSkin>
+            <sideBarEnabled>true</sideBarEnabled>
+        </fluidoSkin>
+    </custom>
 
 </project>

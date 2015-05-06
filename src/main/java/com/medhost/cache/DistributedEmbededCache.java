@@ -4,6 +4,8 @@ import org.infinispan.Cache;
 import org.infinispan.manager.DefaultCacheManager;
 
 /**
+ * In-memory infinispan cache
+ *
  * Created by pandian on 4/20/15.
  */
 public class DistributedEmbededCache implements  CacheData {

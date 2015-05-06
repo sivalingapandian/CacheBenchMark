@@ -13,6 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Distributed Cache loader helps to load/read/delete data into embedded data grid cache
+ *
  * Created by pandian on 4/20/15.
  */
 public class DistributedCacheLoader implements CacheData {
@@ -22,6 +24,7 @@ public class DistributedCacheLoader implements CacheData {
 
     public static final String CACHE_NAME = "default";
 
+    //TODO: move this code out of static block
     static {
         try {
             Configuration replicationConfiguration = new ConfigurationBuilder()
@@ -45,7 +48,7 @@ public class DistributedCacheLoader implements CacheData {
             cache = cacheManager.getCache(CACHE_NAME);
 
         } catch(Throwable th) {
-            th.printStackTrace();
+            logger.error("Unable to instantiate embeded cache", th);
         }
     }
 

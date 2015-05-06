@@ -7,6 +7,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
+ * Access cache service using REST call. In this case, it is infinispan as standalone service
+ *
  * Created by pandian on 4/15/15.
  */
 public class DistributedCache implements CacheData {
@@ -36,7 +38,7 @@ public class DistributedCache implements CacheData {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod(method);
             connection.setRequestProperty("Content-Type", "text/plain");
-            int read = 0;
+            int read;
             byte[] buffer = new byte[1024 * 8];
 
             if (method.equals(PUT)) {
@@ -49,13 +51,12 @@ public class DistributedCache implements CacheData {
 
             connection.connect();
             InputStream responseBodyStream = connection.getInputStream();
-            StringBuffer responseBody = new StringBuffer();
+            StringBuilder responseBody = new StringBuilder();
             while ((read = responseBodyStream.read(buffer)) != -1) {
                 responseBody.append(new String(buffer, 0, read));
             }
             connection.disconnect();
-            String response = responseBody.toString();
-            return response;
+            return responseBody.toString();
         } catch (FileNotFoundException fnfe) {
             // Could be that the key being queried does not exist. Return null.
             return null;

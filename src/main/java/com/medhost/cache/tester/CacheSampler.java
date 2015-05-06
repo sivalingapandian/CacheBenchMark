@@ -8,6 +8,9 @@ import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 import org.apache.jmeter.samplers.SampleResult;
 
 /**
+ * CacheSampler is used to run Jmeter tests and measure performance of each call. This calss is designed to accrpt type
+ * of operation and number of configuration value need to be tested.
+ *
  * Created by pandian on 4/16/15.
  */
 public class CacheSampler extends AbstractJavaSamplerClient{
@@ -52,6 +55,7 @@ public class CacheSampler extends AbstractJavaSamplerClient{
             String value = VALUE + keyCount;
             String result = cacheData.getData(key);
             if( !value.equals(result)) {
+                //Failed
                 sampleResult.sampleEnd();
                 sampleResult.setSuccessful(false);
                 sampleResult.setResponseCode("500");
@@ -59,6 +63,7 @@ public class CacheSampler extends AbstractJavaSamplerClient{
                 return sampleResult;
             }
         }
+        //Passed
         sampleResult.sampleEnd();
         sampleResult.setSuccessful(true);
         sampleResult.setResponseCodeOK();
@@ -88,6 +93,11 @@ public class CacheSampler extends AbstractJavaSamplerClient{
                 default:
                     cacheData = new EhCache();
             }
+
+            /*
+            Do not load configuration into cache when it is data grid. This will be loaded
+             by external JVM
+             */
 
             if( !DISTRIBUTEDEMBEDEDDATAGRIDCACHE.equals(javaSamplerContext.getParameter(TYPE))) {
                 int noOfKeyValue = javaSamplerContext.getIntParameter(NOOFKEYS);

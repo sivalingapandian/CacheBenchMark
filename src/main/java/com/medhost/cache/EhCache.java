@@ -8,6 +8,8 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.store.MemoryStoreEvictionPolicy;
 
 /**
+ * In-memory ehCache
+ *
  * Created by pandian on 4/16/15.
  */
 public class EhCache implements CacheData {
