@@ -31,7 +31,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="type" elementType="Argument">
                 <stringProp name="Argument.name">type</stringProp>
-                <stringProp name="Argument.value">distributedembededcache</stringProp>
+                <stringProp name="Argument.value">ehcache</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="noofkeys" elementType="Argument">
